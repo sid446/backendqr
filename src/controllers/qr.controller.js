@@ -13,7 +13,7 @@ const generateQr=asyncHandler(async(req,res)=>{
 
     const uuid=uuidv4();
 
-    const url=`https://frontend-redeem.onrender.com//access?uuid=${uuid}`;
+    const url=`https://frontend-redeem.onrender.com/access?uuid=${uuid}`;
     
     const qrDataUrl = await QRCode.toDataURL(url);
     const qrCodeEntry=new QRcode({uuid,url});
